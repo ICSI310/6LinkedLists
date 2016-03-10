@@ -14,7 +14,7 @@ public class Node
    
   public Node(String newData, Node newNext) {
     System.out.println("Node: Constructor");
-    this.data = data;
+    this.data = newData;
     this.next = newNext;
   }
   
@@ -40,9 +40,8 @@ public class Node
   }
   
   // Methods
-  public String toString() {
-    System.out.println("Node: toString");
-    return this.data;
+  public void debug() {
+    System.out.println( "Node " + this + " Data " + this.data + " Next " + this.next);
   }
   
   public void print() {
