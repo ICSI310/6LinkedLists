@@ -15,8 +15,11 @@ public class Main
                        list.head.getNext().getNext().getData()+ " " +
                        list.head.getNext().getNext().getNext().getData()
                        );
-    
+
     list.print();
+    list.get(2).print(); //thing1
+    list.insert(2, new Node("thing4", null));
+    list.get(2).print(); // thing4
   }
   
 } // class Main

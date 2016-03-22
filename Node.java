@@ -7,35 +7,35 @@ public class Node
     
   // Constructors
   public Node() {
-    System.out.println("Node: Default Constructor");
+    //System.out.println("Node: Default Constructor");
     this.data = "";
     this.next = null;
   }
    
   public Node(String newData, Node newNext) {
-    System.out.println("Node: Constructor");
+    //System.out.println("Node: Constructor");
     this.data = newData;
     this.next = newNext;
   }
   
   // Getters/Setters
   public Node getNext() {
-    System.out.println("Node: getNext");
+    //System.out.println("Node: getNext");
     return this.next;
   }
   
   public void setNext(Node newNext) {
-    System.out.println("Node setNext");
+    //System.out.println("Node setNext");
     this.next = newNext;
   }
   
   public String getData() {
-    System.out.println("Node: getData");
+    //System.out.println("Node: getData");
     return this.data;
   }
   
   public void setData(String newData) {
-    System.out.println("Node: setData");
+    //System.out.println("Node: setData");
     this.data = newData;
   }
   
