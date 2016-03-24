@@ -9,11 +9,14 @@ public class Main
     list.addToFront(new Node("thing1", null));
     list.addToFront(new Node("thing2", null));
     list.addToFront(new Node("thing3", null));
-    list.print();
+    /*list.print();
     list.get(2).print(); //thing1
     list.insert(2, new Node("thing4", null));
     list.get(2).print(); // thing4
     System.out.println("printing entire list:");
+    list.print();*/
+    list.remove(2).print();
+    System.out.println("list after remove");
     list.print();
   }
   

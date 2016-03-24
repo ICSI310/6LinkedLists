@@ -43,7 +43,15 @@
   }
   
   public Node remove(int index){
-    ???
+    // store the removed node
+    Node removedNode = this.get(index);
+    // get the node before the node
+    Node tmp = this.get(index-1);
+    // set the next from node before the index 
+    // to the node after the index
+    tmp.setNext(tmp.getNext().getNext());
+    // return
+    return tmp;
   }
   
   public Node get(int index) {
@@ -58,6 +66,7 @@
       counter++;
       //System.out.println("current: " + this.current);
     }
+    // TODO: fix this so it returns null if the index doesn't exist
     //System.out.println("Traversal finished");
     return(this.current);
   }
