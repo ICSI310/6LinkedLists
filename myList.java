@@ -12,22 +12,22 @@
   }
   
   // Methods
-  public void add(Node newNode) {
-    //System.out.println("MyList: add");
-    this.head.debug();
-    newNode.debug();
+  public void addToFront(Node newNode) {
+    //System.out.println("MyList: addToFront");
+    //this.head.debug();
+    //newNode.debug();
      // just add to head of list for now
     newNode.setNext(this.head);
-    newNode.debug();
+    //newNode.debug();
     this.head = newNode; 
-    this.head.debug();
+    //this.head.debug();
   }
   
   public void insert(int index, Node newNode) {
     System.out.println("insert: " + index);
     if (index == 0) {
       System.out.println("if index == 0");
-      this.add(newNode);
+      this.addToFront(newNode);
     }
     else{
       System.out.println("else");
@@ -40,6 +40,10 @@
       System.out.println("set newNode");
       // set node before newnode's next to newnode
     } 
+  }
+  
+  public Node remove(????){
+    ???
   }
   
   public Node get(int index) {
@@ -60,11 +64,11 @@
   
   // traverses and prints
   public void print() {
-    System.out.println("MyList: print");
+    //System.out.println("MyList: print");
     this.current = this.head;
-    this.current.debug();
+    //this.current.debug();
     while(null != this.current){
-      this.current.debug();
+      //this.current.debug();
       this.current.print();
       this.current = this.current.getNext();
     }

@@ -6,20 +6,15 @@ public class Main
     MyList list = new MyList();
     
     list.head.setData("thing0");
-    list.add(new Node("thing1", null));
-    list.add(new Node("thing2", null));
-    list.add(new Node("thing3", null));
-    System.out.println(
-                       list.head.getData() + " " +
-                       list.head.getNext().getData()+ " " +
-                       list.head.getNext().getNext().getData()+ " " +
-                       list.head.getNext().getNext().getNext().getData()
-                       );
-
+    list.addToFront(new Node("thing1", null));
+    list.addToFront(new Node("thing2", null));
+    list.addToFront(new Node("thing3", null));
     list.print();
     list.get(2).print(); //thing1
     list.insert(2, new Node("thing4", null));
     list.get(2).print(); // thing4
+    System.out.println("printing entire list:");
+    list.print();
   }
   
 } // class Main
