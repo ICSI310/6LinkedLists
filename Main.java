@@ -15,7 +15,7 @@ public class Main
     list.get(2).print(); // thing4
     System.out.println("printing entire list:");
     list.print();*/
-    list.remove(2).print();
+    list.remove(10).print();
     System.out.println("list after remove");
     list.print();
   }

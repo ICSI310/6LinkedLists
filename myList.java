@@ -43,6 +43,7 @@
   }
   
   public Node remove(int index){
+    //TODO: doesn't work for index = 0
     // store the removed node
     Node removedNode = this.get(index);
     // get the node before the node
@@ -51,7 +52,7 @@
     // to the node after the index
     tmp.setNext(tmp.getNext().getNext());
     // return
-    return tmp;
+    return removedNode;
   }
   
   public Node get(int index) {
