@@ -42,7 +42,7 @@
     } 
   }
   
-  public Node remove(????){
+  public Node remove(int index){
     ???
   }
   
