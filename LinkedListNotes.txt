@@ -2,16 +2,14 @@ https://todaysmeet.com/csi310mar29
 https://github.com/ICSI310/6LinkedLists
 
 3 2 1 0
-SHOULD: 2 1 0
-WILL: null pointer exception
-If we remove 0, what SHOULD happen? what WILL happen?
+3 2 4 1 0
 
-What should we test for? How should we handle this?
+What should we do about problems adding to tail?
 
 List:
-addToFront *
+addToFront 
 insert *
-remove *
+remove 
 get 
 print 
 

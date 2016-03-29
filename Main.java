@@ -16,7 +16,8 @@ public class Main
     System.out.println("printing entire list:");
     list.print();*/
     list.print();
-    list.remove(0);
+    //list.remove(2);
+    list.insert(4, new Node("4"));
     //System.out.println(list.remove(10));
     System.out.println("list after remove");
     list.print();

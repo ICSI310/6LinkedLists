@@ -35,12 +35,28 @@
     else{
       System.out.println("else");
       // traverse to new node
-      this.current = this.get(index-1); 
-      System.out.println("got index: " + this.current);
+      this.current = this.get(index); 
+      if (this.current == null) { // end of the list
+        newNode.setPrev(this.tail);
+        this.tail.setNext(newNode);
+        this.tail = newNode;
+         
+      }
+      else {
+        // set newNode's previous to current's prev
+        newNode.setPrev(this.current.getPrev());
+        // set newNode's next to current
+        newNode.setNext(this.current);
+        // newNode's prevous's next to newNode
+        newNode.getPrev().setNext(newNode);
+        // newNode's next's previous to newNode
+        newNode.getNext().setPrev(newNode);
+      }
+      /*System.out.println("got index: " + this.current);
       // set newnode's next
       newNode.setNext(current.getNext()); // shouldn't be self
       this.current.setNext(newNode);
-      System.out.println("set newNode");
+      System.out.println("set newNode");*/
       // set node before newnode's next to newnode
     } 
   }
@@ -59,14 +75,17 @@
       return null;
     }
     // set the next of the previous to removedNodes's next
-    removedNode.getPrev().setNext(removedNode.getNext());
+    if (removedNode.getPrev() == null) { // beginning of list
+      this.head = removedNode.getNext();
+    }
+    else
+      removedNode.getPrev().setNext(removedNode.getNext());
     // set removedNode's next's prev to removedNode's previous
-    removedNode.getNext().setPrev(removedNode.getPrev());
-    // get the node before the node
-    // Node tmp = this.get(index-1);
-    // set the next from node before the index 
-    // to the node after the index
-    // tmp.setNext(tmp.getNext().getNext());
+    if (removedNode.getNext() == null) { // end of list
+      this.tail = removedNode.getPrev();
+    }
+    else
+      removedNode.getNext().setPrev(removedNode.getPrev());
     // return removed node
     return removedNode;
   }
