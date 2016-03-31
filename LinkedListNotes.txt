@@ -1,22 +1,10 @@
-https://todaysmeet.com/csi310mar29
+https://todaysmeet.com/csi310mar31
 https://github.com/ICSI310/6LinkedLists
 
-3 2 1 0
-3 2 4 1 0
+we're printing everything as we pop it. Algorithm?
 
-What should we do about problems adding to tail?
+push
+pop
+peek ???
 
-List:
-addToFront 
-insert *
-remove 
-get 
-print 
-
-
-
-Node
-getters/setters: next, data
-debug (prints data & node address)
-print (just prints data)
-
+popAll()

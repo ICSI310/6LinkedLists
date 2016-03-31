@@ -13,6 +13,10 @@
     this.current = head;
   }
   
+  public boolean isEmpty() {
+    return (this.head != null);
+  }
+  
   // Methods
   public void addToFront(Node newNode) {
     //System.out.println("MyList: addToFront");
@@ -127,6 +131,21 @@
       //this.current.print();
       System.out.print(this.current.getData() + " ");
       this.current = this.current.getPrev();
+    }
+  }
+  
+  public void push(Node newNode) {
+    System.out.println("push");
+    this.addToFront(newNode);
+  }
+  
+  public Node pop(){
+    return remove(0);
+  }
+  
+  public void popAll() {
+    while (!isEmpty()) {
+      this.pop().print();
     }
   }
   
