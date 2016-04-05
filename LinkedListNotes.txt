@@ -1,10 +1,4 @@
-https://todaysmeet.com/csi310mar31
+https://todaysmeet.com/csi310apr05
 https://github.com/ICSI310/6LinkedLists
 
-we're printing everything as we pop it. Algorithm?
-
-push
-pop
-peek ???
-
-popAll()
+questions???
