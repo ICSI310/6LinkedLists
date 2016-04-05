@@ -2,7 +2,13 @@
 public class Node 
 {  
   // Properties
-  public String data;
+  //public String data;
+  // Option 1: make a hero class
+  //private Hero hero;
+  // Option 2: put the data from the hero class in the node
+  //private String heroName;
+  //private int nemesis;
+  //private double time;
   public Node next;
   public Node prev;
     

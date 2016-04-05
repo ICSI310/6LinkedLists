@@ -1,4 +1,14 @@
 https://todaysmeet.com/csi310apr05
 https://github.com/ICSI310/6LinkedLists
 
-questions???
+How do we implement enqueue? An alternative to traversing from the head to get to the last index?
+
+options (so far):
+get(size-1) -- we don't have a size, + still 	//
+	traverses entire list
+traverse backwards
+like addToFront, but use tail
+
+enqueue, dequeue, dequeueall?
+
+
