@@ -1,0 +1,8 @@
+2
+hero1 0 1.5
+hero2 0 3.1
+hero3 0 2.6
+hero4 1 0.3
+hero5 0 1.2
+hero6 0 5.8
+hero7 0 0.9

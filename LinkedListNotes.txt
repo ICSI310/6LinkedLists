@@ -6,14 +6,7 @@ How can we approach troubleshooting this?
 What should have been printed?
 0 1 2 3
 
-
-Linked List vs. doubly linked list
-Which do we minimally need for the following?
-stacks 
-queues
-
-
-
+If I want to enqueue this, what do I have to do next?
 
 
 

@@ -2,33 +2,40 @@
 public class Node 
 {  
   // Properties
-  public String data;
+  //public String data;
   // Option 1: make a hero class
   //private Hero hero;
   // Option 2: put the data from the hero class in the node
-  //private String heroName;
-  //private int nemesis;
-  //private double time;
+  // don't make things public in your homework; this is just to conserve class time
+  public String heroName;
+  public int nemesis;
+  public double time;
   public Node next;
   public Node prev;
     
   // Constructors
   public Node() {
     //System.out.println("Node: Default Constructor");
-    this.data = "";
+    this.heroName = "";
+    this.nemesis = 0;
+    this.time = 0;
     this.next = null;
     this.prev = null;
   }
   
-  public Node(String newData) {
-    this.data = newData;
+  public Node(String newName, int newNemesis, double newTime) {
+    this.heroName = newName;
+    this.nemesis = newNemesis;
+    this.time = newTime;
     this.next = null;
     this.prev = null;
   }
   
-  public Node(String newData, Node newNext, Node newPrev) {
+  public Node( String newName, int newNemesis, double newTime, Node newNext, Node newPrev) {
     //System.out.println("Node: Constructor");
-    this.data = newData;
+    this.heroName = newName;
+    this.nemesis = newNemesis;
+    this.time = newTime;
     this.next = newNext;
     this.prev = newPrev;
   }
@@ -54,23 +61,23 @@ public class Node
     this.prev = newPrev;
   }
   
-  public String getData() {
+  /*public String getData() {
     //System.out.println("Node: getData");
     return this.data;
-  }
+  }*/
   
-  public void setData(String newData) {
+  /*public void setData(String newData) {
     //System.out.println("Node: setData");
     this.data = newData;
-  }
+  }*/
   
   // Methods
   public void debug() {
-    System.out.println( "Node " + this + " Data " + this.data + " Next " + this.next + " Prev " + this.prev);
+    System.out.println( "Node " + this + " Data " + this.heroName + " " + this.nemesis + " " + this.time + " Next " + this.next + " Prev " + this.prev);
   }
   
   public void print() {
-    System.out.println(this.data);
+    System.out.println(this.heroName + " " + this.nemesis + " " + this.time);
   }
   
   

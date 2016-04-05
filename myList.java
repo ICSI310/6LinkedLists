@@ -119,7 +119,7 @@
     while(null != this.current){
       //this.current.debug();
       //this.current.print();
-      System.out.print(this.current.getData() + " ");
+      System.out.print(this.current.heroName + " ");
       this.current = this.current.getNext();
     }
     System.out.print("\n");
@@ -129,7 +129,7 @@
     while(null != this.current){
       //this.current.debug();
       //this.current.print();
-      System.out.print(this.current.getData() + " ");
+      System.out.print(this.current.heroName + " ");
       this.current = this.current.getPrev();
     }
   }
