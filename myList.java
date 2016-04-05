@@ -14,7 +14,7 @@
   }
   
   public boolean isEmpty() {
-    return (this.head != null);
+    return (this.head == null);
   }
   
   // Methods
@@ -134,6 +134,8 @@
     }
   }
   
+  // stack methods
+  
   public void push(Node newNode) {
     System.out.println("push");
     this.addToFront(newNode);
@@ -149,4 +151,25 @@
     }
   }
   
+  // queue methods
+  
+  public void enqueue(Node newNode){
+    newNode.setPrev(this.tail);
+    this.tail.setNext(newNode);
+    //newNode.debug();
+    this.tail = newNode; 
+    //this.head.debug();
+  }
+  
+  public Node dequeue(){
+    return remove(0);
+  }
+  
+  public void dequeueAll() {
+    //System.out.println("dequeueAll");
+    while (!isEmpty()) {
+      //System.out.println("isn't empty");
+      this.dequeue().print();
+    }
+  }
 } // class myList

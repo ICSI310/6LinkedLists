@@ -7,10 +7,12 @@ public class Main
     
     
     list.head.setData("0");
-    list.push(new Node("1"));
-    list.push(new Node("2"));
-    list.push(new Node("3"));
-    list.pop().print();
+    list.enqueue(new Node("1"));
+    list.enqueue(new Node("2"));
+    list.enqueue(new Node("3"));
+    //list.dequeue().print();
+    //list.dequeue().print();
+    //list.dequeueAll();
     list.popAll();
     /*list.print();
     list.get(2).print(); //thing1
