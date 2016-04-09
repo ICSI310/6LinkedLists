@@ -1,15 +1,45 @@
-https://todaysmeet.com/csi310apr05
+https://todaysmeet.com/csi310apr07
 https://github.com/ICSI310/6LinkedLists
 
-How can we approach troubleshooting this?
+Let's make a list of what we think we need?
 
-What should have been printed?
-0 1 2 3
+* track time
 
-If I want to enqueue this, what do I have to do next?
+How can we approach tracking time?
+-while reading file
+-after file done
+
+loop: for, while
+double
+increment time
+
+Give me at least 3 ways to track/increment time
+
+* 2. add the amount of time that passed for capturing each hero
+
+* 3. track time by when the sharks need to eat
+
+How should we deal with time variable(s)?
+
+
+add the amount of time that passed for capturing each hero
+
+Algorithm for printing just lines about capturing heroes + time elapsed?
+
+What happens when we bring a double into a class as an arg?
 
 
 
+
+
+
+
+
+* Create a method prompting the list to act as a queue or stack depending on whether nemesis has been reached?
+
+* A way to tell if we should be in stack vs. queue
+
+* track when sharks need to eat
 
 
 
