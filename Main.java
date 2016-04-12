@@ -8,7 +8,8 @@ public class Main
   public static void main(String[] args) throws IOException{
     MyList list = new MyList();
     int sharks = 0;
-    Double elapsedTime = new Double(0);// assume 0 = first hero captured
+    //Double elapsedTime = new Double(0);// assume 0 = first hero captured
+    double elapsedTime = 0;
     double nextSharkFeeding = 0;
     Scanner input = null;
 
@@ -19,19 +20,16 @@ public class Main
             System.out.println("sharks = " + sharks);
             while (input.hasNext()) {// find out if there's another hero
               Node tmp = getHero(input, elapsedTime);
-              System.out.println(elapsedTime + ": " +
-                                   tmp.heroName + 
-                                   " has been captured.");
               elapsedTime += tmp.time;
-              System.out.println(elapsedTime);
-              list.enqueue(tmp);
-                
+              list.capture(tmp, elapsedTime);
+              System.out.println(list.feedSharks().heroName + " has been eaten.");
             }
         } finally {
             if (input != null) {
                 input.close();
             }
         }
+        // TODO: replace this with something that feeds the sharks every 4 hours until the list is empty
         list.dequeueAll();
     
     
@@ -58,13 +56,14 @@ public class Main
   }
   
   // parses input and returns next hero node
-  public static Node getHero(Scanner input, Double elapsedTime) {
+  public static Node getHero(Scanner input, double elapsedTime) {
     String heroName = input.next();
     int nemesis = input.nextInt();
     double timeToArrive = input.nextDouble();
     Node tmp = new Node(heroName, nemesis, timeToArrive);
     return tmp;
   }
-    
+  
+
     
 } // class Main

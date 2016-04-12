@@ -172,4 +172,15 @@
       this.dequeue().print();
     }
   }
+  
+    public void capture(Node capturedHero, double elapsedTime) {
+      this.enqueue(capturedHero);
+      System.out.println(elapsedTime + ": " +
+                                   capturedHero.heroName + 
+                                   " has been captured.");
+  }
+  
+  public Node feedSharks() {
+    return this.dequeue();// feeds next hero to sharks
+  }
 } // class myList
