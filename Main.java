@@ -7,24 +7,19 @@ public class Main
   // the main method
   public static void main(String[] args) throws IOException{
     MyList list = new MyList();
-    int sharks = 0;
     //Double elapsedTime = new Double(0);// assume 0 = first hero captured
     double elapsedTime = 0;
-    double nextSharkFeeding = 0;
     Scanner input = null;
 
         try {
             input = new Scanner(new BufferedReader(new FileReader("heroList.txt")));
             // assume first line is number of sharks (int)
-            sharks = input.nextInt();
-            System.out.println("sharks = " + sharks);
+            list.setSharks(input.nextInt());
             while (input.hasNext()) {// find out if there's another hero
               Node tmp = getHero(input, elapsedTime);
               elapsedTime += tmp.time;
               list.capture(tmp, elapsedTime);
-              //list.feedSharks(elapsedTime);
-              // TODO: this doesn't account for sharks. it just feeds someone every time
-              
+              list.trackFeedingTime(elapsedTime);
             }
         } finally {
             if (input != null) {

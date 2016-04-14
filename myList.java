@@ -2,6 +2,9 @@
 {  
   // Properties
   boolean nemesisCaptured;
+  double timeSinceFed;
+  double timeBetweenFeedings;
+  private int sharks;
   public Node head;
   public Node tail;
   public Node current;
@@ -10,9 +13,18 @@
   public MyList() {
     //System.out.println("MyList: Default constructor");
     this.nemesisCaptured = false;
+    this.timeSinceFed = 0;
+    this.timeBetweenFeedings = 8;
+    this.sharks = 0;
     this.head = new Node();
     this.tail = head;
     this.current = head;
+  }
+  
+  public void setSharks(int newSharks) {
+    this.sharks = newSharks;
+    this.timeBetweenFeedings = 8/this.sharks;
+    System.out.println("sharks = " + sharks);
   }
   
   public boolean isEmpty() {
@@ -193,12 +205,9 @@
   }
   
   public void feedSharks(double elapsedTime) {
+    System.out.println("feedSharks");
     Node fedHero;
 // feeds next hero to sharks
-    /*if (capturedHero.nemesis == 1) {
-      this.nemesisCaptured = true;
-      this.enqueue(capturedHero);
-    }*/
     if (this.nemesisCaptured)
       fedHero = this.pop();
     else
@@ -209,5 +218,14 @@
     System.out.println(elapsedTime + ": " +
                                    fedHero.heroName + 
                                    " has been fed to the sharks.");
+  }
+  
+  public void trackFeedingTime(double elapsedTime){
+    System.out.println("trackFeedingTime: timeSinceFed " + this.timeSinceFed + " timeBetweenFeedings " + this.timeBetweenFeedings);
+    if (this.timeSinceFed > this.timeBetweenFeedings) {
+      feedSharks(elapsedTime);
+      this.timeSinceFed = this.timeSinceFed - this.timeBetweenFeedings;
+    }
+    this.timeSinceFed += elapsedTime - lastfeedingtime
   }
 } // class myList
