@@ -1,6 +1,7 @@
  public class MyList 
 {  
   // Properties
+  boolean nemesisCaptured;
   public Node head;
   public Node tail;
   public Node current;
@@ -8,6 +9,7 @@
   // Constructors
   public MyList() {
     //System.out.println("MyList: Default constructor");
+    this.nemesisCaptured = false;
     this.head = new Node();
     this.tail = head;
     this.current = head;
@@ -173,14 +175,39 @@
     }
   }
   
-    public void capture(Node capturedHero, double elapsedTime) {
+  public void capture(Node capturedHero, double elapsedTime) {
+    if (capturedHero.nemesis == 1) {
+      this.nemesisCaptured = true;
       this.enqueue(capturedHero);
-      System.out.println(elapsedTime + ": " +
+    }
+    else
+    {
+      if (this.nemesisCaptured)
+        this.push(capturedHero);
+      else
+        this.enqueue(capturedHero);
+    }
+    System.out.println(elapsedTime + ": " +
                                    capturedHero.heroName + 
                                    " has been captured.");
   }
   
-  public Node feedSharks() {
-    return this.dequeue();// feeds next hero to sharks
+  public void feedSharks(double elapsedTime) {
+    Node fedHero;
+// feeds next hero to sharks
+    /*if (capturedHero.nemesis == 1) {
+      this.nemesisCaptured = true;
+      this.enqueue(capturedHero);
+    }*/
+    if (this.nemesisCaptured)
+      fedHero = this.pop();
+    else
+      fedHero = this.dequeue();
+    if (fedHero.nemesis == 1) {
+      this.nemesisCaptured = false;
+    }
+    System.out.println(elapsedTime + ": " +
+                                   fedHero.heroName + 
+                                   " has been fed to the sharks.");
   }
 } // class myList

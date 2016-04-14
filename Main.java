@@ -22,7 +22,9 @@ public class Main
               Node tmp = getHero(input, elapsedTime);
               elapsedTime += tmp.time;
               list.capture(tmp, elapsedTime);
-              System.out.println(list.feedSharks().heroName + " has been eaten.");
+              //list.feedSharks(elapsedTime);
+              // TODO: this doesn't account for sharks. it just feeds someone every time
+              
             }
         } finally {
             if (input != null) {

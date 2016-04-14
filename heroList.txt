@@ -7,5 +7,3 @@ hero4 1 0.3
 hero5 0 1.2
 hero6 0 5.8
 hero7 0 0.9
-
- .1
